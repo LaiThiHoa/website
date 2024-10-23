@@ -73,10 +73,15 @@ h2 {
   overflow-x: auto;
   padding: 10px 0;
 }
+.course-list a{
+  text-decoration: none;
+  color: black;
+  /* border-bottom: 1px solid; */
+}
 
 .course-card {
   background-color: #fff;
-  border: 1px solid #ddd;
+  border: 1px solid #cecece;
   border-radius: 5px;
   margin-right: 10px;
   padding: 10px;
@@ -117,14 +122,16 @@ h2 {
   height: 300px;
 }
 .header-tab2 img{
-  padding-right: 50px;
   /* background-color: white; */
   margin-bottom: 20px;
+  border-radius: 10%;
+  margin-right: 50px;
  
 
 }
 .header-tab2 h2{
-  padding-right: 150px;
+  padding-right: 250px;
+
 }
 .course-card h3{
   text-align: center;
@@ -148,5 +155,29 @@ h2 {
 }
 .ri-facebook-circle-fill a{
   text-decoration: none;
+}
+.grid{
+  display: grid;
+  grid-template-columns: 60% 40%;
+}
+.left img{
+  width: 100%;
+  height: auto;
+}
+.right{
+  background-color: white;
+  padding: 10px 15px;
+}
+.right p{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  line-height: 2;
+  padding-bottom: 20px;
+
+}
+.right .icon a{
+  text-decoration: none;
+  font-size: 20px;
+  margin-right: 15px;
+  color: black;
 
 }
