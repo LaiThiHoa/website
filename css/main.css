@@ -1,26 +1,61 @@
 body {
   /* background-color: #FFA609; */
-  background-color: bisque;
+  /* background-color: bisque; */
+  background-color:  #C5C6C7;
+  font-family: "Pacifico", cursive;;
+
 }
 .tab {
   display: inline-block;
   padding: 10px 20px;
   cursor: pointer;
   font-weight: bold;
-
-  padding-right: 5px;
-  /* border-right:none; */
+  font-size: 20px;
+  padding-right: 10px;
+  transition: transform 0.2s ease; 
+  text-align: center;
 }
 
 .tab.active {
-  border-bottom: 1px solid black;
+  /* border-bottom: 1px solid black;   */
+  color: #555;
+  /* transform: translateY(-5px); */
+  transform: scale(1.2) translateY(-5px);
  
 }
+@keyframes pulse {
+  0%, 100% {
+      transform: scale(1); /* Kích thước ban đầu */
+  }
+  50% {
+      transform: scale(1.5); /* Kích thước khi phóng to */
+  }
+}
 
+/* Áp dụng animation cho chữ */
+.home {
+  font-weight: bold;
+  animation: pulse 2s ease-in-out infinite; /* Thời gian và cách lặp animation */
+}
+@keyframes upDown {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-10px);
+  }
+}
+
+/* Áp dụng cho lớp chữ chuyển động */
+.tab.active {
+  /* font-weight: bold; */
+  animation: upDown 2s ease-in-out infinite;
+}
 .tab-content {
   display: none;
   padding: 20px;
   border-bottom: 1px gray;
+  
 }
 .tab-content img{
   width: 100%;
@@ -58,7 +93,8 @@ p {
 h2 {
   margin-top: 5px;
   font-size: 100px;
-  font-family: "Sofia", sans-serif;
+  margin-left: 50px;
+ 
 }
 .courses-section {
   padding: 20px;
@@ -81,6 +117,9 @@ h2 {
   text-decoration: none;
   color: black;
   border-bottom: 1px solid gray;
+}
+.course-list a:hover{
+   
 }
 
 .course-card {
@@ -144,20 +183,42 @@ h2 {
   margin-right: 5px;
 }
 .tab-container .ri-facebook-circle-fill{
-  color: blue;
-  font-size: 20px;
+  border-radius: 50%;
+  font-size: 35px;
+  color: white;
   margin-right: 10px;
-  
+  transition: transform 0.2s ease; 
+  display: inline-block;
+}
+.tab-container .ri-facebook-circle-fill:hover{
+  color: black;
+  transform: scale(1.2);;
 }
 .tab-container .ri-messenger-fill{
-  font-size: 20px;
-  padding-right: 10px;
-  color: rgb(185, 90, 181);
-
+  border-radius: 50%;
+  font-size: 35px;
+  color: white;
+  margin-right: 10px;
+  transition: transform 0.2s ease; 
+  display: inline-block;
 }
+.tab-container .ri-messenger-fill:hover{
+  color: black;
+  transform: scale(1.2);
+}
+
 .tab-container .ri-tiktok-fill{
-  padding-right: 35%;
-  font-size: 20px;
+  
+  border-radius: 50%;
+  font-size: 35px;
+  color: white;
+  margin-right: 10px;
+  transition: transform 0.2s ease; 
+  display: inline-block;
+}
+.tab-container .ri-tiktok-fill:hover{
+  color: black;
+  transform: scale(1.2);;
 }
 .ri-facebook-circle-fill a{
   text-decoration: none;
@@ -207,4 +268,119 @@ h2 {
 }
 .left img{
   border-radius: 0%;
+}
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  margin-top: auto;
+}
+
+footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Liên kết mạng xã hội với biểu tượng */
+footer .social-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 10px 0px;
+}
+
+/* Cấu hình biểu tượng mạng xã hội */
+footer .social-links a {
+  /* padding-right: 60px; */
+  padding: 0px 60px;
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #444;
+  color: #fff;
+  font-size: 1.5em;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+/* Hiệu ứng khi hover */
+footer .social-links a:hover {
+  background-color: #ff6600; /* Thay đổi màu nền khi hover */
+  color: #fff;
+  transform: scale(1.2) rotate(10deg); /* Phóng to và xoay nhẹ */
+  box-shadow: 0 4px 15px rgba(255, 102, 0, 0.6); /* Hiệu ứng đổ bóng màu cam */
+}
+
+/* Phần bản quyền */
+footer .copyright {
+  font-size: 0.9em;
+  color: #ccc;
+  margin-top: 10px;
+}
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  perspective: 1000px; /* Tạo hiệu ứng chiều sâu */
+  margin: 50px auto;
+}
+
+/* Tạo cấu trúc thẻ lật */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d; /* Giữ hiệu ứng 3D khi lật */
+}
+
+/* Lật khi hover */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg); /* Xoay 180 độ để lật */
+}
+
+/* Mặt trước */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Ẩn mặt sau khi lật */
+  border-radius: 10px; /* Bo tròn góc cho thẻ */
+  overflow: hidden;
+}
+
+/* Mặt trước với ảnh */
+.flip-card-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Đảm bảo ảnh vừa vặn */
+  border-radius: 10px;
+}
+
+/* Nội dung mặt sau */
+.flip-card-back {
+  background-color: #333;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotateY(180deg); /* Xoay mặt sau để khớp với hiệu ứng lật */
+  padding: 20px;
+}
+
+/* Nội dung văn bản */
+.flip-card-back h3 {
+  font-size: 1.5em;
+  margin: 0;
+}
+
+.flip-card-back p {
+  font-size: 1em;
+  margin-top: 10px;
 }

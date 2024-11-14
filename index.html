@@ -20,10 +20,9 @@
     <div class="tab-container">
 
         <!-- Tabs -->
-        <a href="https://www.facebook.com/profile.php?id=100069913642332" target="_blank"><i class="ri-facebook-circle-fill"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=100069913642332" target="_parent"><i class="ri-facebook-circle-fill"></i></a>
         <i class="ri-messenger-fill"></i>
         <i class="ri-tiktok-fill"></i>
-         
         <div class="tab active " data-tab="tab1"><i class="ri-home-2-line"></i> Home</div>
         <div class="tab" data-tab="tab2"><i class="ri-projector-line"></i>Labs</div>
         <div class="tab " data-tab="tab3">About me</div>
@@ -32,39 +31,82 @@
     <!-- Tab content -->
     <div class="tab-content active" id="tab1">
         <p>Have a good day <i class="ri-emotion-happy-line"></i></p>
-        <h1>Welcome!</h1>
+        <div class="home"><h1>Welcome!</h1></div>
+        
         <img src="img/taking-2471165_1280.jpg" alt="anh">
     </div>
     <div class="tab-content " id="tab2">
         <div class="header-tab2">
-            <h2> Project</h2>
-            <img src="img/anhphongcanh (1).jpg" alt="ảnh phong cảnh">
-            <img src="img/anhphongcanh (2).jpg" alt="ảnh phong cảnh">
-            <img src="img/anhphongcanh(3).jpg" alt="ảnh phong cảnh">
+            <div class="project"><h2> Project</h2></div>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <!-- Mặt trước với ảnh -->
+                    <div class="flip-card-front">
+                        <img src="img/anhphongcanh (1).jpg" alt="Ảnh mặt trước">
+                    </div>
+                    <!-- Mặt sau -->
+                    <div class="flip-card-back">
+                        <div>
+                            <h3>Nội Dung Mới</h3>
+                            <p>Đây là thông tin bổ sung khi lật ảnh.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <!-- Mặt trước với ảnh -->
+                    <div class="flip-card-front">
+                        <img src="img/anhphongcanh (1).jpg" alt="Ảnh mặt trước">
+                    </div>
+                    <!-- Mặt sau -->
+                    <div class="flip-card-back">
+                        <div>
+                            <h3>Nội Dung Mới</h3>
+                            <p>Đây là thông tin bổ sung khi lật ảnh.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- <img src="img/anhphongcanh (2).jpg" alt="ảnh phong cảnh">
+            <img src="img/anhphongcanh(3).jpg" alt="ảnh phong cảnh"> -->
 
 
         </div>
             <section class="courses-section">
                 <div class="course-list">
                     <div class="course-card">
-                        <h3><a href="https://laithihoa.github.io/Lab2/" target="_blank">Lab 2</a></h3>
+                        <h3><a href="https://laithihoa.github.io/Lab2/" target="_parent">Lab 2</a></h3>
                         <img src="img/Annotation 2024-10-25 092032.png" alt="FPT ISMS Training">
                         <div class="course-title">Name: Login</div>
                         <div class="course-hour"> Time: a week</div>
                     </div>
                     <div class="course-card">
-                        <h3><a href="https://laithihoa.github.io/Lab3/" target="_blank">Lab 3</a></h3>
+                        <h3><a href="https://laithihoa.github.io/Lab3/" target="_parent">Lab 3</a></h3>
                         <img src="img/lab3.png" alt="FPT ISMS Training">
                         <div class="course-title">Name: Dưocument sharing</div>
                         <div class="course-hour"> Time: a week</div>
                     </div>
                     <div class="course-card">
-                        <h3><a href="https://laithihoa.github.io/Lab4/" target="_blank">Lab 4</a></h3>
+                        <h3><a href="https://laithihoa.github.io/Lab4/" target="_parent">Lab 4</a></h3>
                         <img src="img/Annotation 2024-10-25 091918.png" alt="FPT ISMS Training">
                         <div class="course-title">Name: Course</div>
                         <div class="course-hour"> Time: a week</div>
                     </div>
-                    
+                    <div class="course-card">
+                        <h3><a href="https://laithihoa.github.io/Lab5/" target="_parent">Lab 5</a></h3>
+                        <img src="img/lab5.png" alt="FPT ISMS Training">
+                        <div class="course-title">Name: My learning</div>
+                        <div class="course-hour"> Time: a week</div>
+                    </div>
+                    <div class="course-card">
+                        <h3><a href="https://laithihoa.github.io/Lab6/" target="_parent">Lab 6</a></h3>
+                        <img src="img/lab6.png" alt="FPT ISMS Training">
+                        <div class="course-title">Name: My learning</div>
+                        <div class="course-hour"> Time: a week</div>
+                    </div>
+                   
                 </div>
             </section>
         </a>
@@ -91,8 +133,24 @@
 
             </div>
         </div>
+        
     </div>    
-    
     <script src="js/script.js"></script>
+    <footer>
+        <div class="container">
+            <div class="contact-info">
+                <p>Liên hệ với chúng tôi: <a href="mailto:info@example.com" style="color: #ff6600;">info@example.com</a> | Điện thoại: +84 123 456 789</p>
+            </div>
+            <div class="social-links">
+                <a href="https://facebook.com" target="_blank">Facebook</a>
+                <a href="https://twitter.com" target="_blank">Twitter</a>
+                <a href="https://instagram.com" target="_blank">Instagram</a>
+                <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 Công ty của bạn. Tất cả các quyền được bảo lưu.</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
