@@ -246,6 +246,7 @@ h2 {
   bottom: 0;
   left: 0;
   min-height: 3%;
+  min-width: 10%;
   background-color: #FF6600;
   color: black;
   padding: 0.5em;
@@ -255,7 +256,11 @@ h2 {
   font-size: 1em;
   white-space: nowrap;
 }
+.card_head a{
+  text-decoration: none;
+  color: black;
 
+}
 .card img {
   width: 100%;
   height: 100%;
@@ -278,17 +283,15 @@ h2 {
 
 .card:hover .card_head {
 
-  
     width: 50%;
-    background-color: #ff660065;
     text-align: center;
     top: calc(100% - 2em);
-    border-color: #00000080;
     color: white;
-    font-size: 2em;
-    transform: rotate(0deg) skew(-5deg);
-    border-radius: 40px;
+    font-size: 20px;
+    transform: rotate(0deg) skew(-4deg);
+    border-radius: 30px;
     margin-left: 5px;
+    box-shadow: 0 0 15px #FF6600;
   
 }
 
@@ -438,68 +441,7 @@ footer .copyright {
   color: #ccc;
   margin-top: 10px;
 }
-.flip-card {
-  background-color: transparent;
-  width: 300px;
-  height: 200px;
-  perspective: 1000px; /* Tạo hiệu ứng chiều sâu */
-  margin: 50px auto;
-}
 
-/* Tạo cấu trúc thẻ lật */
-.flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.6s;
-  transform-style: preserve-3d; /* Giữ hiệu ứng 3D khi lật */
-}
-
-/* Lật khi hover */
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg); /* Xoay 180 độ để lật */
-}
-
-/* Mặt trước */
-.flip-card-front, .flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden; /* Ẩn mặt sau khi lật */
-  border-radius: 10px; /* Bo tròn góc cho thẻ */
-  overflow: hidden;
-}
-
-/* Mặt trước với ảnh */
-.flip-card-front img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Đảm bảo ảnh vừa vặn */
-  border-radius: 10px;
-}
-
-/* Nội dung mặt sau */
-.flip-card-back {
-  background-color: #333;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transform: rotateY(180deg); /* Xoay mặt sau để khớp với hiệu ứng lật */
-  padding: 10px;
-}
-
-/* Nội dung văn bản */
-.flip-card-back h3 {
-  font-size: 1.5em;
-  margin: 0;
-}
-
-.flip-card-back p {
-  font-size: 1em;
-  margin-top: 10px;
-}
 /* chỉnh giao diện xem trên điện thoại */
 @media (max-width: 768px) {
   /* Thiết lập lại kích thước chữ và padding cho các thẻ */
@@ -526,18 +468,8 @@ footer .copyright {
       align-items: center;
   }
 
-  /* Điều chỉnh vùng chứa cho các thẻ */
-  .flip-card {
-      width: 250px;
-      height: 180px;
-      margin: 20px auto;
-  }
-
-  /* Điều chỉnh vùng hiển thị của các thẻ khóa học */
-  .course-card {
-      width: 100%; /* Đưa các thẻ khóa học chiếm 100% chiều rộng của khung nhìn */
-      margin: 10px 0;
-  }
+ 
+ 
 
   /* Điều chỉnh hình ảnh và header-tab2 */
   .header-tab2 {
@@ -571,10 +503,6 @@ footer .copyright {
       margin: 0 5px; /* Giảm khoảng cách giữa các biểu tượng */
   }
 
-  /* Nội dung mặt sau của flip-card */
-  .flip-card-back {
-      padding: 10px;
-  }
 
   /* Thay đổi kích thước và bố cục cho footer */
   footer .social-links {
